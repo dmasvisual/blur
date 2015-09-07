@@ -14,6 +14,13 @@
 		5F77E1AF1B970ECE0095286D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F77E1AE1B970ECE0095286D /* Images.xcassets */; };
 		5F77E1B21B970ECE0095286D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F77E1B01B970ECE0095286D /* LaunchScreen.xib */; };
 		5F77E1BE1B970ECE0095286D /* BlurButtonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F77E1BD1B970ECE0095286D /* BlurButtonTests.m */; };
+		5F77E1C91B9712F40095286D /* ImageProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F77E1C81B9712F40095286D /* ImageProcessor.m */; };
+		5F77E1CB1B971E860095286D /* AppleLogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5F77E1CA1B971E860095286D /* AppleLogo.jpg */; };
+		5F77E1CE1B9747B20095286D /* InitialButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F77E1CD1B9747B20095286D /* InitialButtonViewController.m */; };
+		5FDD6C4A1B98658A000E563B /* CustomTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FDD6C491B98658A000E563B /* CustomTableController.m */; };
+		5FDD6C4C1B986C4C000E563B /* lena_secret.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 5FDD6C4B1B986C4C000E563B /* lena_secret.bmp */; };
+		5FDD6C4F1B98A84B000E563B /* BlurTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FDD6C4E1B98A84B000E563B /* BlurTableController.m */; };
+		5FDD6C541B98A8C4000E563B /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FDD6C531B98A8C4000E563B /* CustomCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +47,18 @@
 		5F77E1B71B970ECE0095286D /* BlurButtonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlurButtonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F77E1BC1B970ECE0095286D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F77E1BD1B970ECE0095286D /* BlurButtonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlurButtonTests.m; sourceTree = "<group>"; };
+		5F77E1C71B9712F40095286D /* ImageProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageProcessor.h; sourceTree = "<group>"; };
+		5F77E1C81B9712F40095286D /* ImageProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageProcessor.m; sourceTree = "<group>"; };
+		5F77E1CA1B971E860095286D /* AppleLogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = AppleLogo.jpg; sourceTree = "<group>"; };
+		5F77E1CC1B9747B20095286D /* InitialButtonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialButtonViewController.h; sourceTree = "<group>"; };
+		5F77E1CD1B9747B20095286D /* InitialButtonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialButtonViewController.m; sourceTree = "<group>"; };
+		5FDD6C481B98658A000E563B /* CustomTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableController.h; sourceTree = "<group>"; };
+		5FDD6C491B98658A000E563B /* CustomTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableController.m; sourceTree = "<group>"; };
+		5FDD6C4B1B986C4C000E563B /* lena_secret.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = lena_secret.bmp; path = ../../lena_secret.bmp; sourceTree = "<group>"; };
+		5FDD6C4D1B98A84B000E563B /* BlurTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlurTableController.h; sourceTree = "<group>"; };
+		5FDD6C4E1B98A84B000E563B /* BlurTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlurTableController.m; sourceTree = "<group>"; };
+		5FDD6C521B98A8C4000E563B /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
+		5FDD6C531B98A8C4000E563B /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,14 +100,21 @@
 		5F77E1A01B970ECE0095286D /* BlurButton */ = {
 			isa = PBXGroup;
 			children = (
+				5FDD6C501B98A860000E563B /* Controllers */,
 				5F77E1A51B970ECE0095286D /* AppDelegate.h */,
 				5F77E1A61B970ECE0095286D /* AppDelegate.m */,
-				5F77E1A81B970ECE0095286D /* ViewController.h */,
-				5F77E1A91B970ECE0095286D /* ViewController.m */,
 				5F77E1AB1B970ECE0095286D /* Main.storyboard */,
 				5F77E1AE1B970ECE0095286D /* Images.xcassets */,
 				5F77E1B01B970ECE0095286D /* LaunchScreen.xib */,
 				5F77E1A11B970ECE0095286D /* Supporting Files */,
+				5F77E1C71B9712F40095286D /* ImageProcessor.h */,
+				5F77E1C81B9712F40095286D /* ImageProcessor.m */,
+				5F77E1CA1B971E860095286D /* AppleLogo.jpg */,
+				5FDD6C4B1B986C4C000E563B /* lena_secret.bmp */,
+				5FDD6C4D1B98A84B000E563B /* BlurTableController.h */,
+				5FDD6C4E1B98A84B000E563B /* BlurTableController.m */,
+				5FDD6C521B98A8C4000E563B /* CustomCell.h */,
+				5FDD6C531B98A8C4000E563B /* CustomCell.m */,
 			);
 			path = BlurButton;
 			sourceTree = "<group>";
@@ -117,6 +143,19 @@
 				5F77E1BC1B970ECE0095286D /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5FDD6C501B98A860000E563B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5F77E1A81B970ECE0095286D /* ViewController.h */,
+				5F77E1A91B970ECE0095286D /* ViewController.m */,
+				5F77E1CC1B9747B20095286D /* InitialButtonViewController.h */,
+				5F77E1CD1B9747B20095286D /* InitialButtonViewController.m */,
+				5FDD6C481B98658A000E563B /* CustomTableController.h */,
+				5FDD6C491B98658A000E563B /* CustomTableController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +241,8 @@
 				5F77E1AD1B970ECE0095286D /* Main.storyboard in Resources */,
 				5F77E1B21B970ECE0095286D /* LaunchScreen.xib in Resources */,
 				5F77E1AF1B970ECE0095286D /* Images.xcassets in Resources */,
+				5F77E1CB1B971E860095286D /* AppleLogo.jpg in Resources */,
+				5FDD6C4C1B986C4C000E563B /* lena_secret.bmp in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,7 +261,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F77E1AA1B970ECE0095286D /* ViewController.m in Sources */,
+				5F77E1CE1B9747B20095286D /* InitialButtonViewController.m in Sources */,
+				5FDD6C541B98A8C4000E563B /* CustomCell.m in Sources */,
+				5FDD6C4F1B98A84B000E563B /* BlurTableController.m in Sources */,
 				5F77E1A71B970ECE0095286D /* AppDelegate.m in Sources */,
+				5FDD6C4A1B98658A000E563B /* CustomTableController.m in Sources */,
+				5F77E1C91B9712F40095286D /* ImageProcessor.m in Sources */,
 				5F77E1A41B970ECE0095286D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,6 +464,7 @@
 				5F77E1C31B970ECE0095286D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5F77E1C41B970ECE0095286D /* Build configuration list for PBXNativeTarget "BlurButtonTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +473,7 @@
 				5F77E1C61B970ECE0095286D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
