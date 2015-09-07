@@ -40,6 +40,7 @@ NSArray *filenamesArray;
         //initial setup
         cell.label.text = [NSString stringWithFormat:@"TEST %ld",(long)indexPath.row];
         cell.myImageView.image = [ImageProcessor readFromFilename:[filenamesArray objectAtIndex:indexPath.row]];
+        [cell.myImageView setContentMode:UIViewContentModeScaleAspectFill];
         cell.blurImageView.alpha = 0.0;
         cell.myImageView.alpha = 1.0;
         cell.label.alpha = 1.0;
@@ -48,6 +49,7 @@ NSArray *filenamesArray;
     if(!initial){
         cell.label.text = [NSString stringWithFormat:@"TEST %ld",(long)indexPath.row];
         cell.myImageView.image = [ImageProcessor readFromFilename:[filenamesArray objectAtIndex:indexPath.row]];
+        [cell.myImageView setContentMode:UIViewContentModeScaleAspectFill];
 
         //Checking if the UIImage at idexPath.row is empty
         CGImageRef cgref = [[imageArray objectAtIndex:indexPath.row]CGImage];
@@ -62,11 +64,13 @@ NSArray *filenamesArray;
         //Blur Animation. Alpha of the diferents views is assigned by using the blur array.
         cell.blurImageView.alpha = !blur[indexPath.row]; cell.myImageView.alpha = blur[indexPath.row]; cell.label.alpha = blur[indexPath.row];
         [UIView animateWithDuration:3.0 animations:^{
-            [cell setUserInteractionEnabled:NO];
+            [tableView setUserInteractionEnabled:NO];
+            //[cell setUserInteractionEnabled:NO];
             //alphas are inverted
             cell.blurImageView.alpha = !cell.blurImageView.alpha; cell.myImageView.alpha = !cell.myImageView.alpha; cell.label.alpha = !cell.label.alpha;}
                          completion:^(BOOL finished){
-                             [cell setUserInteractionEnabled:YES]; }];
+                             //[cell setUserInteractionEnabled:YES];
+                         [tableView setUserInteractionEnabled:YES];}];
 
     }
     if(indexPath.row==4)

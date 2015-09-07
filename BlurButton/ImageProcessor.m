@@ -34,10 +34,10 @@
     [clampFilter setValue:inputImage forKey:@"inputImage"];
     [clampFilter setValue:[NSValue valueWithBytes:&transform objCType:@encode(CGAffineTransform)] forKey:@"inputTransform"];
     
-    // Apply gaussian blur filter with radius of 30
+    // Apply gaussian blur filter with radius of 10
     CIFilter *gaussianBlurFilter = [CIFilter filterWithName: @"CIGaussianBlur"];
     [gaussianBlurFilter setValue:clampFilter.outputImage forKey: @"inputImage"];
-    [gaussianBlurFilter setValue:@20 forKey:@"inputRadius"];
+    [gaussianBlurFilter setValue:@10 forKey:@"inputRadius"];
 
     CIContext *context = [CIContext contextWithOptions:nil];
     CGImageRef cgImage = [context createCGImage:gaussianBlurFilter.outputImage fromRect:[inputImage extent]];
@@ -60,15 +60,19 @@
 
 + (UIImage *) blurView:(UIView *)view
 {
+
     //Class method that apply a blurring filter to a view. View is converted to UIImage.
     UIGraphicsBeginImageContextWithOptions(view.bounds.size, view.opaque, 0.0);
-    [view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    //[view.layer renderInContext:UIGraphicsGetCurrentContext()]; //uncomment for other snapchat method
+    [view drawViewHierarchyInRect:view.bounds afterScreenUpdates:YES];
     
     UIImage * img = UIGraphicsGetImageFromCurrentImageContext();
     
     UIGraphicsEndImageContext();
     
     UIImage *blurImg = [ImageProcessor blurImage:img];
+    
+
     
     return blurImg;
 }
